@@ -1,30 +1,56 @@
 .projectCard {
-  display: inline-block;
-  border-radius: 5px;
-  padding: 25px;
-  margin: 10px;
-  font-size: large;
-  font-family: sans-serif;
-  background: linear-gradient(45deg, #f235df, #ffbf00, #abc3f5, #b687d8, #ffffff);
-  color: white;
-  font-weight: bold; 
-  text-align: center; 
-  z-index: 1000;
-  border: 10px solid transparent;
-  box-shadow: 0px 0px 10px #FF66C4;
-}
-
-.selected {
-  background: #91dfdf;
-}
-
-.button {
-  background: none; /* Make the background transparent */
-  color: #ffffff; /* Neon blue font color */
-  font-family: sans-serif;
-  font-size: 20px; /* Adjust font size as needed */
-  border: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to right, #E6BDB3, #EAC5C0); /* Sandpink gradient */
+  border-radius: 15px; /* Rounded edges */
   padding: 20px;
-  border-radius: 10px;
-  background: linear-gradient(45deg, #fa85ee, #a1bef9);
+  box-sizing: border-box;
+  width: 300px; /* Fixed width */
+  height: 200px; /* Fixed height */
+  font-family: 'Seravek', sans-serif; /* Make sure you have included the Seravek font in your project */
+  font-weight: 200; /* Ultralight, although font-weight might not be sufficient to achieve 'ultralight' if the font doesn't support it */
+  color: #333; /* Text color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+  overflow: hidden; /* Prevents content from spilling out */
+  text-overflow: ellipsis; /* Ensures the text doesn't overflow */
+  white-space: nowrap; /* Keeps the text in a single line */
+}
+
+.projectTitle {
+  font-size: 1.2em; /* Adjust size as needed */
+  margin-bottom: 0.5em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.projectName {
+  font-size: 1em;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Creates three columns */
+  grid-gap: 20px; /* Adjust the space between cards */
+  margin: 20px; /* Adds some space around the grid */
+  justify-content: center;
+  align-items: center;
+}
+
+/* If you want the cards to be responsive and stack on smaller screens: */
+@media (max-width: 768px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .gridContainer {
+    grid-template-columns: 1fr; /* One column for very small screens */
+  }
 }

@@ -26,7 +26,7 @@ const HomePage = () => {
     }, []);
 
     return (
-      <div className={styles.container}>
+  <div className={styles.gridContainer}>
         {projects.map((project, index) => (
           <ProjectCard key={index} title={project.options[0]} name={project.options[1]} />
         ))}
